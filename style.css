@@ -1,0 +1,197 @@
+:root {
+    --cor-fundo: #0b0f19;
+    --cor-painel: #111624;
+    --cor-destaque: #6366f1;
+    --cor-destaque-rgb: 99, 102, 241;
+
+    --cor-texto-painel: #c7d2fe;
+    --cor-texto-titulo: #e0e7ff;
+    --cor-texto-label: #a5b4fc;
+
+    --cor-borda-input: #363c52;
+    --cor-texto-input: #f1f5f9;
+    --cor-placeholder: #565f7e;
+
+    --cor-erro: #ef4444;
+    --cor-sucesso: #22c55e;
+    --cor-texto-botao: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    font-family: Arial, sans-serif;
+
+    background: var(--cor-fundo);
+
+    color: var(--cor-texto-painel);
+}
+
+h1 {
+    margin-bottom: 25px;
+
+    color: var(--cor-texto-titulo);
+
+    font-size: 28px;
+    text-align: center;
+    
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+
+    padding: 30px;
+
+    background-color: var(--cor-painel);
+
+    border: 1px solid var(--cor-borda-input);
+    border-radius: 16px;
+}
+
+label {
+    display: block;
+
+    margin-top: 16px;
+    margin-bottom: 7px;
+
+    color: var(--cor-texto-label);
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    background-color: #0c101c;
+
+    border: 1px solid var(--cor-borda-input);
+    border-radius: 8px;
+
+    color: var(--cor-texto-input);
+
+    font-size: 14px;
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--cor-placeholder);
+}
+
+
+
+select {
+    cursor: pointer;
+}
+
+.botoes {
+    margin-top: 24px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: var(--cor-destaque);
+
+    color: var(--cor-texto-botao);
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+
+#IdFeedback {
+    width: 100%;
+    max-width: 400px;
+
+    margin-top: 12px;
+    padding: 10px;
+
+    color: var(--cor-erro);
+
+    font-size: 14px;
+    text-align: center;
+}
+
+#botaolimpar {
+    background-color: var(--cor-erro);
+}
+
+#lista-cards {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+
+.card-pokemon {
+    width: 200px;
+
+    padding: 20px;
+
+    background-color: var(--cor-painel);
+
+    border: 1px solid var(--cor-borda-input);
+    border-radius: 16px;
+
+    text-align: center;
+
+    transition: transform 0.2s;
+}
+
+
+.card-pokemon:hover {
+    transform: translateY(-5px);
+}
+
+
+.card-pokemon img {
+    width: 150px;
+    height: 150px;
+
+    object-fit: contain;
+}
+
+
+.card-pokemon h2 {
+    margin-top: 10px;
+
+    color: var(--cor-texto-titulo);
+
+    font-size: 20px;
+
+    text-transform: capitalize;
+}
+
+.close {
+    background-color: #ef4444;
+}
